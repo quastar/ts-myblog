@@ -1,0 +1,147 @@
+.header-avatar {
+    width: 2rem;
+    height: 2rem;
+}
+
+.home-header {
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.setting-page {
+    &-close{
+        position: inherit;
+        right: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+    &-show {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(133, 129, 129);
+        top: 0;
+        left: 0;
+        z-index: 2;
+        animation: fade_toright 0.3s forwards;
+    }
+
+    &-hide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgb(133, 129, 129);
+        top: 0;
+        left: 0;
+        z-index: 2;
+        animation: fade_toleft 0.8s forwards;
+    }
+}
+
+.home-body {
+    animation: message_box_in 0.5s forwards;
+    min-height: 100rem;
+    .message-box {
+        width: 100%;
+        height: 3rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        p {
+            margin: 0;
+        }
+
+        &-tag {
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            line-height: 100%;
+            text-align: center;
+            align-items: center;
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 80%;
+            padding-left: 0.3rem;
+            box-sizing: border-box;
+
+            >p:nth-child(1) {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+
+            div {
+                display: flex;
+                font-size: 0.6rem;
+                color: rgb(155, 144, 144);
+
+                p {
+                    line-height: 1.2rem;
+                    align-items: center;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+        &-active {
+            animation: fade-in 0.8s forwards;
+        }
+    }
+
+}
+
+@keyframes fade-in {
+    0% {
+        background: none;
+    }
+
+    100% {
+        background: rgb(226, 223, 223);
+    }
+}
+
+@keyframes fade_toright {
+    0% {
+        
+        transform: translateX(-100%);
+    }
+
+    100% {
+
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade_toleft {
+    0% {
+        
+        transform: translateX(0);
+    }
+
+    100% {
+
+        transform: translateX(-100%);
+    }
+}
+@keyframes message_box_in {
+    0%{
+        transform: translateX(-60%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
