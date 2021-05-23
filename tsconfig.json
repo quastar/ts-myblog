@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false,
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -27,6 +28,7 @@
       "scripthost"
     ]
   },
+  "noImplicitAny": false,
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
